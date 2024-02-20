@@ -1,1 +1,1 @@
-console.log('this is my test cdn');
+console.log('test test');
