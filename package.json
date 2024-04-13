@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve",
+    "proxy": "node proxy-server.js",
+    "build": "esbuild main.js --bundle  --minify  --watch --outfile=prod/main.js",
+    "dev": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "cors": "^2.8.5",
+    "esbuild": "^0.20.2",
+    "express": "^4.19.2",
+    "gsap": "^3.12.5",
+    "node-fetch": "^3.3.2",
+    "split-type": "^0.3.4"
+  }
+}
