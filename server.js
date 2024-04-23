@@ -8,9 +8,9 @@ const app = express();
 app.use(cors());
 
 // Define a route to serve the 'main.js' file
-app.get('/prod/main.js', (req, res) => {
+app.get('/dev/main.js', (req, res) => {
     // Resolve the absolute path to the 'main.js' file
-    const filePath = path.join(__dirname, 'prod', 'main.js');
+    const filePath = path.join(__dirname, 'dev', 'main.js');
     
     // Serve the file using Express' sendFile function
     res.sendFile(filePath);

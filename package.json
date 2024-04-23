@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "serve",
     "proxy": "node proxy-server.js",
-    "build": "esbuild main.js --bundle  --minify  --watch --outfile=prod/main.js",
+    "build-prod": "esbuild main.js --bundle  --minify --outfile=prod/main.js",
+    "build-dev": "esbuild main.js --bundle  --minify  --watch --outfile=dev/main.js",
     "dev": "node server.js"
   },
   "author": "",
