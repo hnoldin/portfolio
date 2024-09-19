@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Start the animation
     gsap.fromTo(".loadinganimation", 
     { opacity: 1,
-      display:"flex",
-     }, 
+      display:"flex"
+    }, 
     { opacity: 0, 
       duration: .3, 
       delay:1.5, 
@@ -66,17 +66,13 @@ function hideAnimation() {
 window.onload = function() {
   document.querySelector(".loadinganimation").style.display = "none"; 
   //The loader is blocking the inner pages so on load we need to set the display to none when the hero text is not being fired
- };
+};
 
-
-
-
-
-//plyr video
+<script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
 $(".plyr_component").each(function (index) {
   let thisComponent = $(this);
 
-  // create plyr settings
+// create plyr settings
   let player = new Plyr(thisComponent.find(".plyr_video")[0], {
     controls: ["play", "progress", "current-time", "mute", "fullscreen"],
     resetOnEnd: true
@@ -90,7 +86,7 @@ $(".plyr_component").each(function (index) {
     thisComponent.removeClass("hide-cover");
   });
 
-  // pause other playing videos when this one starts playing
+ // pause other playing videos when this one starts playing
   player.on("play", (event) => {
 		$(".plyr_component").removeClass("hide-cover");
     thisComponent.addClass("hide-cover");
